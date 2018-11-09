@@ -12,7 +12,7 @@ We will use docker to create a container which allows us to use a wider variety 
 A [finished example](https://lemurian.herokuapp.com) that demonstrates some basic functionality.
 
 ## Step 1: Setup and deploy
-- You will probably want to do this on your DO box where Docker is easy to install. Look up how to install docker here [Docker Documentation](https://docs.docker.com/engine/installation/)
+- Look up how to install docker here [Docker Documentation](https://docs.docker.com/engine/installation/)
 - Git clone the existing template repository.
 `app/requirements.txt` and `app/conda-requirements.txt`  contain some default settings which will be installed by `pip` and `conda` respectively.
 - There is some boilerplate HTML in `app/templates/`
