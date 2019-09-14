@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Graph">
     {{ script | safe }}
-    <title>We did it!</title>
+    <title>Results</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdn.pydata.org/bokeh/release/bokeh-0.12.16.min.css" type="text/css" />
   </head>
@@ -13,12 +13,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-left">
-          <h2>Success!</h2>
           {{ div | safe }}
           <h4>
             <form id='inputform2' method='post' action='/' >
               <p>
-                <input type='submit' value='Look at another stock?' />
+                <input type='submit' value='Change stock' />
               </p>
             </form>
           </h4>
