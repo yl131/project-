@@ -11,12 +11,12 @@ app.vars={}
 
 
 @app.route('/')
-def main():
-  return redirect('/index')
-
-@app.route('/index', methods=['GET'])
 def index():
-    return render_template('index.html')
+  return render_template('index.html')
+
+@app.route('/about')
+def about():
+  return render_template('about.html')
 
 def graph():
   app.vars['ticker'] = request.form['ticker']
