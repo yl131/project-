@@ -1,100 +1,33 @@
-<html>
-  <head lang="en">
+<!doctype html>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A Heroku application displaying stock price for the last month.">
-    <meta name="author" content="@peizhangosu">
-
-    <title>Stock Price Lookup</title>
-
-    <!-- Bootstrap core CSS, for navbar -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- Bokeh CSS -->
-    <link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.css" type="text/css" />
-    <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.7.min.js"></script>
+    <meta name="description" content="Graph page!">
     {{ script | safe }}
-
-    <!-- Custom CSS for navbar, bokeh and boxed-->
-    <style>
-    body {
-      padding-top: 70px;
-    }
-    .bokeh {
-      margin: auto;
-      max-width: 100%;
-      height:auto;
-    }
-    .boxed {
-      border: 1px solid red;
-    }
-    </style>
-
+    <title>We did it!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.pydata.org/bokeh/release/bokeh-0.12.16.min.css" type="text/css" />
   </head>
-
   <body>
-    <!-- navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-1">
-          <span class="sr-only">Toggle navigation</span>
-          </button>
-          <span class="navbar-brand">Stock Price Lookup</span>
-        </div>
-
-        <div class="collapse navbar-collapse" id="nav-1">
-          <ul class="nav navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/PeiZhangOSU/stock-ticker-12days">GitHub</a>
-            <!--
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            -->
-          </ul>
-          <!--
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-          -->
-        </div>
-      </div>
-    </nav>
-
-    <!-- form -->
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-left">
-          <form id='input' method='post' action='/'>	 <!-- action is the URL you want to move to next-->
-          <p>Ticker symbol: <input type='text' name='ticker' placeholder='GOOG' /></p>
-          <p>
-          <input type="checkbox" name='features' value='close' />Closing price<br>
-          <input type="checkbox" name='features' value='adj. close' />Adjusted closing price<br>
-          <input type="checkbox" name='features' value='open' />Opening price<br>
-          <input type="checkbox" name='features' value='adj. open' />Adjusted opening price<br>
-          </p>
-          <p><input type="submit" value="Submit"></p>  <!-- value is the text that will appear on the button. -->
-          </form>
+          <h2>Success!</h2>
+          {{ div | safe }}
+          <h4>
+            <form id='inputform2' method='post' action='/' >
+              <p>
+                <input type='submit' value='Look at another stock?' />
+              </p>
+            </form>
+          </h4>
         </div>
       </div>
     </div>
-
-    <!-- Bokeh plotting -->
-    <div class="container">
-        <div class='bokeh'>
-              {{ div | safe }}
-        </div>
-    </div>
+    <script type="text/javascript" src="//cdn.pydata.org/bokeh/release/bokeh-0.12.16.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
 </html>
+
