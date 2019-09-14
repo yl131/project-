@@ -7,14 +7,16 @@ from bokeh.palettes import Spectral11
 from bokeh.embed import components 
 
 app = Flask(__name__)
+app.vars={}
+
 
 @app.route('/')
-def index():
-  return render_template('index.html')
+def main():
+  return redirect('/index')
 
-@app.route('/about')
-def about():
-  return render_template('about.html')
+@app.route('/index', methods=['GET'])
+def index():
+    return render_template('index.html')
 
 def graph():
   app.vars['ticker'] = request.form['ticker']
