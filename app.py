@@ -28,7 +28,7 @@ def makePlot (df, ticker, year, price):
 	plot.grid.grid_line_alpha=2.0
 	plot.xaxis.axis_label = 'Date'
 	plot.yaxis.axis_label = 'Price (USD)'
-	plot.line(df.index, df[price], color='#0000FF', legend='%s: %s' %(ticker,price))
+	plot.line(df.index, df[price], color='#b2b2ff', legend='%s: %s' %(ticker, price))
 	plot.legend.location = "top_left"
 	script, div = components(plot)
 	return script, div
@@ -41,7 +41,6 @@ def index():
 def graph():
 	ticker, price, year = request.form['tickerInput'].upper(), request.form['priceInput'], request.form['yearInput']
 	
-	#Somewhat sloppy way of doing error checking...
 	if ticker == '' or year == '':
 		df = None
 	else:
@@ -53,7 +52,7 @@ def graph():
 		return render_template('graph.html', div = div, script = script)
 		
 	else:
-		err = 'Uhoh! Something went wrong. :( Either we do not have data for that ticker/year combo or you entered an invalid ticker and/or year. Please enter a valid ticker and year.'
+		err = 'Please try another ticker or year.'
 		return render_template('index.html', err=err)
 
 if __name__ == '__main__':
