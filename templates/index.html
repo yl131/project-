@@ -14,8 +14,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-left">
-          <h2>Historical Stock Price Plotter</h2>
-          <h3>Input a ticker and the desired year below. Data is pulled from the <a href="https://www.quandl.com/databases/WIKIP">Quandl WIKI stock dataset</a></h3>
+          <h2>Stock Ticker</h2>
+          <h4>Enter a ticker and desired year. Data is pulled from the <a href="https://www.quandl.com/databases/WIKIP">Quandl WIKI stock dataset</a></h3>
           <h4>
             <form id='inputform' method='post' action='graph' >
               <p>
@@ -26,14 +26,12 @@
               </p>
               <p>
                 <input type="radio" name='priceInput' value='close' align='left' checked='yes' /> Closing price<br>
-                <input type="radio" name='priceInput' value='adj_close' align='left' /> Adjusted closing price<br>
                 <input type="radio" name='priceInput' value='open' align='left' /> Opening price<br>
-                <input type="radio" name='priceInput' value='adj_open' align='left' /> Adjusted opening price<br>
                 <input type="radio" name='priceInput' value='high' align='left' /> Daily high<br>
                 <input type="radio" name='priceInput' value='low' align='left' /> Daily low<br>
               </p>
               <p>
-                <input type='submit' value='Go!' />
+                <input type='submit' value='Submit' />
               </p>
             </form>
           </h4>
