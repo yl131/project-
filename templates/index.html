@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="12 day Milestone TDI">
+    <meta name="description" content="Capstone TDI">
 
-    <title>Yan's Stock Ticker</title>
+    <title>To wine or not to whine?</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,20 +15,20 @@
       <div class="row">
         <div class="col-lg-12 text-left">
           <h2>Stock Ticker</h2>
-          <h4>Enter a ticker and desired year. Data is pulled from the <a href="https://www.quandl.com/databases/WIKIP">Quandl WIKI stock dataset</a></h3>
+          <h4>Enter a short description of your wine. You can usually find this at the back of the bottle!</a></h3>
           <h4>
-            <form id='inputform' method='post' action='graph' >
+            <form id='inputform' method='post' action='predict' >
               <p>
-                Ticker: <input type='text' name='tickerInput' placeholder='GOOG' />
+                Description: <input type='text' name='wine_input' placeholder='Fruity? Crisp? Full-bodied?' />
               </p>
               <p>
-                Year: <input type='text' name='yearInput' placeholder='2017' />
+                Winery: <input type='text' name='winery_input' placeholder='Pierre Gimonnet et Fils' />
               </p>
               <p>
-                <input type="radio" name='priceInput' value='close' align='left' checked='yes' /> Closing price<br>
-                <input type="radio" name='priceInput' value='open' align='left' /> Opening price<br>
-                <input type="radio" name='priceInput' value='high' align='left' /> Daily high<br>
-                <input type="radio" name='priceInput' value='low' align='left' /> Daily low<br>
+                Region: <input type='text' name='region_input' placeholder='France' />
+              </p>
+              <p>
+                Price: <input type='text' name='price_input' placeholder='65' />
               </p>
               <p>
                 <input type='submit' value='Submit' />
