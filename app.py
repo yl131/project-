@@ -5,7 +5,7 @@ from bokeh.plotting import figure
 from bokeh.embed import components
 
 app = Flask(__name__)
-
+"""
 def getData (ticker, year, price):
 	datestart = '%d-01-01' %year
 	dateend = '%d-12-31' %year
@@ -32,11 +32,11 @@ def makePlot (df, ticker, year, price):
 	plot.legend.location = "top_left"
 	script, div = components(plot)
 	return script, div
-
+"""
 @app.route('/', methods=['GET','POST'])
 def index():
 	return render_template('index.html')
-
+"""
 @app.route('/graph', methods=['POST'])
 def graph():
 	ticker, price, year = request.form['tickerInput'].upper(), request.form['priceInput'], request.form['yearInput']
@@ -54,6 +54,6 @@ def graph():
 	else:
 		err = 'Please try another ticker or year.'
 		return render_template('index.html', err=err)
-
+"""
 if __name__ == '__main__':
 	app.run(port=33507)
