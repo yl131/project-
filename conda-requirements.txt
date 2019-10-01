@@ -7,3 +7,5 @@ pip
 simplejson
 scipy
 numpy
+pytesseract
+tesseract
