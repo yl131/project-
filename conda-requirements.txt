@@ -9,3 +9,4 @@ scipy
 numpy
 pytesseract
 tesseract
+pillow
