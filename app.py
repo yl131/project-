@@ -6,7 +6,6 @@ from ocr_core import ocr_core
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
-Bootstrap(app)
 
 @app.route('/', methods=['GET','POST'])
 def index():
