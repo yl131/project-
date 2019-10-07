@@ -3,7 +3,6 @@ import os
 import pandas as pd
 from flask import Flask, render_template, request
 from ocr_core import ocr_core
-from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 
