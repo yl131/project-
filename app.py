@@ -2,7 +2,6 @@ import requests
 import os
 import pandas as pd
 from flask import Flask, render_template, request
-from ocr_core import ocr_core
 
 app = Flask(__name__)
 
