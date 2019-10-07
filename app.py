@@ -3,11 +3,13 @@ import os
 import pandas as pd
 from flask import Flask, render_template, request
 from ocr_core import ocr_core
+from flask_bootstrap import Bootstrap
 
 UPLOAD_FOLDER = '/static/uploads/'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
+Bootstrap(app)
 
 def allowed_file(filename):
     return '.' in filename and \
