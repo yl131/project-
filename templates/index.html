@@ -19,9 +19,9 @@
           <h4>Enter a short description of your wine. You can usually find this at the back of the bottle!</a></h3>
           <h4>
             <font color = '#94877f' />
-            <form id='inputform' method='post' action='graph' >
+            <form id='inputform' method='post' action='predict' >
             <p>
-              Description:  <input type='text' name='wine_input' placeholder='Fruity? Crisp? Full-bodied?' style='width: 300px; height:200px' />
+              Description: <input type='text' name='description' placeholder='Full-bodied?' style='width: 300px; height:200px' />
             </p>
             <form method=post enctype=multipart/form-data>
             <p>
@@ -30,13 +30,16 @@
             </form>
             <p> The extracted text from the image above is: <b> {{ extracted_text }} </b></p>
             <p>
-              Winery:       <input type='text' name='winery_input' placeholder='Pierre Gimonnet et Fils' />
+              Variety: <input type='text' name='variety' placeholder='Chardonnay' />
             </p>
             <p>
-              Region:       <input type='text' name='region_input' placeholder='France' />
+              Winery: <input type='text' name='winery' placeholder='Pierre Gimonnet et Fils' />
             </p>
             <p>
-              Price:        <input type='text' name='price_input' placeholder='65' />
+              Region: <input type='text' name='province' placeholder='France' />
+            </p>
+            <p>
+              Price: <input type='text' name='price' placeholder='65' />
             </p>
             <p>
               <input type='submit' value='Submit' />
