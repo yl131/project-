@@ -19,6 +19,7 @@ from sklearn.pipeline import FeatureUnion
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.datasets import make_regression
 from sklearn.linear_model import Ridge
+from model import ColumnSelectTransformer, CorpusTransformer, DictEncoder, EstimatorTransformer
 
 app = Flask(__name__)
 
