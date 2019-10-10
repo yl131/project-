@@ -4,7 +4,21 @@ import pandas as pd
 from flask import Flask, render_template, request
 import numpy as np
 import dill
-import sklearn
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import confusion_matrix, classification_report
+from sklearn.feature_extraction import DictVectorizer
+from sklearn.pipeline import Pipeline
+from sklearn.utils import shuffle
+from sklearn.preprocessing import OneHotEncoder
+from collections import defaultdict
+from sklearn import base
+from sklearn.pipeline import FeatureUnion
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.datasets import make_regression
+from sklearn.linear_model import Ridge
 
 app = Flask(__name__)
 
