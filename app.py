@@ -2,12 +2,12 @@ import requests
 import os
 import pandas as pd
 from flask import Flask, render_template, request
-#import pickle
+import pickle
 import numpy as np
 
 app = Flask(__name__)
 
-model = pickle.load(open('/lib/models/wine_estimator.pkl','rb'))
+model = pickle.load(open('lib/models/wine_estimator.pkl','rb'))
     
 @app.route('/', methods=['GET','POST'])
 def index():
