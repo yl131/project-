@@ -6,3 +6,5 @@ jinja2
 pip
 simplejson
 nomkl
+pickle
+scikit-learn
