@@ -6,7 +6,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-model = dill.load(open('lib/models/wine_estimator.pkl','rb'))
+model = dill.load(open('lib/models/wine_estimator.dill','rb'))
     
 @app.route('/', methods=['GET','POST'])
 def index():
