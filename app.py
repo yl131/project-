@@ -7,7 +7,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-#model = pickle.load(open('/lib/models/wine_estimator.pkl','rb'))
+model = pickle.load(open('/lib/models/wine_estimator.pkl','rb'))
     
 @app.route('/', methods=['GET','POST'])
 def index():
