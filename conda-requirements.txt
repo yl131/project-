@@ -8,3 +8,5 @@ simplejson
 scipy
 numpy
 pillow
+scikit-learn
+sklearn
