@@ -1,5 +1,4 @@
 pandas
-bokeh
 dill
 flask
 jinja2
@@ -9,4 +8,3 @@ scipy
 numpy
 pillow
 scikit-learn
-sklearn
