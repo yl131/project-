@@ -21,12 +21,6 @@ from sklearn.datasets import make_regression
 from sklearn.linear_model import Ridge
 from model import ColumnSelectTransformer, CorpusTransformer, DictEncoder, EstimatorTransformer
 
-try:
-    from PIL import Image
-except ImportError:
-    import Image
-import pytesseract
-
 app = Flask(__name__)
 
 dill._dill._reverse_typemap['ClassType'] = type
