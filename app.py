@@ -44,7 +44,7 @@ def prediction():
     query_df = pd.DataFrame.from_dict(query)
     prediction = model.predict(query_df)
      
-    return render_template('prediction.html', prediction = prediction)
+    return render_template('prediction.html', prediction = 23)
 
 
 if __name__ == '__main__':
