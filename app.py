@@ -32,7 +32,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/prediction', methods=['POST'])
-def predict():
+def prediction():
     
     query = {}
     query['description'] = request.form['description']
