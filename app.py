@@ -3,7 +3,7 @@ import os
 import pandas as pd
 from flask import Flask, render_template, request
 import numpy as np
-import pickle
+import dill
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
@@ -23,7 +23,9 @@ from model import ColumnSelectTransformer, CorpusTransformer, DictEncoder, Estim
 
 app = Flask(__name__)
 
-model = pickle.load(open('lib/models/wine_estimator.pkl','rb'))
+dill._dill._reverse_typemap['ClassType'] = type
+
+model = dill.load(open('lib/models/wine_estimator.dill','rb'))
     
 @app.route('/', methods=['GET','POST'])
 def index():
