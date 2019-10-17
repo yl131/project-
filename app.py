@@ -34,15 +34,15 @@ def index():
 @app.route('/prediction', methods=['POST'])
 def prediction():
     
-    query = {}
-    query['description'] = request.form['description']
-    query['price'] = request.form['price']
-    query['province'] = request.form['province']
-    query['variety'] = request.form['variety']
-    query['winery'] = request.form['winery']
+    #query = {}
+    #query['description'] = request.form['description']
+    #query['price'] = request.form['price']
+    #query['province'] = request.form['province']
+    #query['variety'] = request.form['variety']
+    #query['winery'] = request.form['winery']
     
-    query_df = pd.DataFrame.from_dict(query)
-    prediction = model.predict(query_df)
+    #query_df = pd.DataFrame.from_dict(query)
+    #prediction = model.predict(query_df)
      
     return render_template('prediction.html', prediction = 23)
 
