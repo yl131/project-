@@ -4,7 +4,6 @@ import pandas as pd
 from flask import Flask, render_template, request
 import numpy as np
 import dill
-import seaborn as sns
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
@@ -46,7 +45,6 @@ def prediction():
     prediction = model.predict(query_df).item()
     
     return render_template('prediction.html', prediction = prediction)
-
 
 if __name__ == '__main__':
     app.run()
