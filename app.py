@@ -28,23 +28,6 @@ dill._dill._reverse_typemap['ClassType'] = type
 
 model = dill.load(open('lib/models/wine_estimator.dill','rb'))
 
-def make_plot (df):
-    
-    g = sns.regplot(x='points', y='price', data=df, 
-                    x_jitter=True, fit_reg=False,
-                    marker='o', color='teal', scatter_kws={'s':2})
-    g.set_title("Points by Price Distribuition", fontsize=20)
-    g.set_xlabel("Points", fontsize= 15)
-    g.set_ylabel("Price (USD)", fontsize= 15)
-
-    g.annotate('Your wine',
-               xy=(wine_estimator.predict(query_df).item(),query['price'][0]), 
-               xytext=(92+0.5, 1800),fontsize= 13,
-               arrowprops=dict(arrowstyle="->",
-               connectionstyle="angle3,angleA=0,angleB=-90"));
-    image = plt.show()
-    return image
-
 @app.route('/', methods=['GET','POST'])
 def index():
     return render_template('index.html')
@@ -62,9 +45,7 @@ def prediction():
     query_df = pd.DataFrame.from_dict(query, orient = 'columns')
     prediction = model.predict(query_df).item()
     
-    image = make_plot(query)
-    
-    return render_template('prediction.html', prediction = prediction, image = image)
+    return render_template('prediction.html', prediction = prediction)
 
 
 if __name__ == '__main__':
